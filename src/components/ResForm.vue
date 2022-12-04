@@ -19,7 +19,7 @@
               id="fname"
               type="text"
               name="fname"
-              placeholder="Fatih"
+              placeholder="Mochammad"
               ref="input"
             />
             <div class="error" v-if="!$v.fname.required && $v.fname.$dirty">
@@ -45,7 +45,7 @@
               id="lname"
               type="text"
               name="lname"
-              placeholder="Ozoglu"
+              placeholder="Saleh"
             />
             <div class="error" v-if="!$v.lname.required && $v.lname.$dirty">
               Last name is required
@@ -114,12 +114,12 @@
             <div class="error" v-if="!$v.tc.required && $v.tc.$dirty">
               Please enter your identity number
             </div>
-            <div
+            <!-- <div
               class="error"
-              v-if="$v.tc.$model !== '' && !$v.tc.identityCheck && $v.tc.$dirty"
+              v-if="$v.tc.$model !== ''"
             >
               Please enter a valid identity number
-            </div>
+            </div> -->
           </div>
           <!-- HES Code input area and validations -->
           <div class="item">
@@ -160,7 +160,7 @@
               id="email"
               type="email"
               name="email"
-              placeholder="fatihozoglu@yahoo.com"
+              placeholder="mochammadsaleh26@gmail.com"
             />
             <div class="error" v-if="!$v.email.required && $v.email.$dirty">
               Email is required

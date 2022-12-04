@@ -8,12 +8,16 @@
     </p>
     <!-- All inputs are enclosed into input-container -->
     <div class="input-container">
-      <input
+      <!-- <input
         v-model="location"
         class="location-input"
         type="text"
         placeholder="Where are you going?"
-      />
+      /> -->
+      <!-- <select class="location-input" v-model="location">
+        <option v-for="(item, index) in optionLocation" :value="item.name" :key="index">{{ item.name }}</option>
+      </select> -->
+      <Select2 class="location-input" v-model="location" :options="optionLocation"/>
       <!-- Date inputs starts here-->
       <div class="date-input-container">
         <span style="width: 45%; text-align: center">{{ checkinDate }}</span>
@@ -129,6 +133,7 @@ export default {
       adultNum: 1,
       childrenNum: 0,
       roomNum: 1,
+      optionLocation : null
     };
   },
   methods: {
@@ -180,6 +185,11 @@ export default {
     },
   },
   mounted() {
+    //Fetch data when app component is created
+    fetch("http://localhost:9001/api/master/location")
+      .then((res) => res.json())
+      .then((res) => (this.optionLocation = res));
+
     // Set checkin and checkout dates as today and tomorrow when the component is mounted
     this.today();
     this.tomorrow();

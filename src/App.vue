@@ -45,7 +45,7 @@ export default {
   },
   created() {
     //Fetch data when app component is created
-    fetch("data.json")
+    fetch("http://localhost:9001/api/master/hotel")
       .then((res) => res.json())
       .then((res) => (this.data = res));
   },

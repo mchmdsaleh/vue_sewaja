@@ -25,12 +25,12 @@
               >Stays</router-link
             >
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link class="nav-link" :to="{ name: 'Home' }"
               ><i class="fa fa-plane me-2" aria-hidden="true"></i
               >Flights</router-link
             >
-          </li>
+          </li> -->
           <li class="nav-item">
             <router-link class="nav-link" :to="{ name: 'Home' }"
               ><i class="fa fa-car me-2" aria-hidden="true"></i>Car
