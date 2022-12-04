@@ -141,6 +141,7 @@ export default {
     setGuestData() {
       this.$emit("setGuestData", {
         location: this.location,
+        locationName: this.searchLocationName,
         adult: this.adultNum,
         children: this.childrenNum,
         room: this.roomNum,
@@ -182,6 +183,10 @@ export default {
         let difference = checkout.getTime() - checkin.getTime();
         return difference / (1000 * 3600 * 24);
       }
+    },
+    searchLocationName() {
+      let obj = this.optionLocation.find(o => o.id == this.location);
+      return obj.text
     },
   },
   mounted() {

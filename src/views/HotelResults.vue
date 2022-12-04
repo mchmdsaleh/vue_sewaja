@@ -19,7 +19,7 @@
               d="M17.464 6.56a8.313 8.313 0 1 1-15.302 6.504A8.313 8.313 0 0 1 17.464 6.56zm1.38-.586C16.724.986 10.963-1.339 5.974.781.988 2.9-1.337 8.662.783 13.65c2.12 4.987 7.881 7.312 12.87 5.192 4.987-2.12 7.312-7.881 5.192-12.87zM15.691 16.75l7.029 7.03a.75.75 0 0 0 1.06-1.06l-7.029-7.03a.75.75 0 0 0-1.06 1.06z"
             ></path>
           </svg>
-          <div class="result ms-3">{{ guestData.location }}</div>
+          <div class="result ms-3">{{ guestData.locationName }}</div>
         </div>
       </div>
       <div class="w-100 mb-1">
@@ -113,7 +113,7 @@ export default {
     //Filters the results based on selected location by the guest
     selectedLocationHotels() {
       return this.hotelsData.filter(
-        (item) => item.location === this.guestData.location
+        (item) => item.location === this.guestData.locationName
       );
     },
   },
